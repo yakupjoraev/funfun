@@ -1,0 +1,158 @@
+// Footer
+
+.footer {
+  padding-top: 110px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--main-color);
+
+  @media (max-width: $breakpoint992) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+
+  // .footer__container
+
+  &__container {}
+
+  // .footer__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column-reverse;
+      row-gap: 20px;
+    }
+
+  }
+
+  // .footer__funfun
+
+  &__funfun {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 16px;
+  }
+
+  // .footer__funfun-link
+
+  &__funfun-link {}
+
+  // .footer__funfun-img
+
+  &__funfun-img {}
+
+  // .footer__copy
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .footer__copy-text
+
+  &__copy-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--main-color);
+
+
+  }
+
+  a.footer__copy-text:hover {
+    text-decoration: underline;
+  }
+
+  // .footer__links
+
+  &__links {}
+
+  // .footer__menu
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 10px;
+
+    @media (max-width: 1800px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+      text-align: center;
+    }
+
+
+    @media (max-width: $breakpoint1450) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+  }
+
+  // .footer__item
+
+  &__item {
+    display: grid;
+  }
+
+  // .footer__link
+
+  &__link {
+    padding: 10px 36px;
+    background-color: var(--second-color);
+    border-radius: 50px;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white-color);
+
+    transition: color 0.2s linear, background-color 0.2s linear;
+
+    &:hover {
+      background-color: #EDE419;
+      color: var(--main-color);
+    }
+  }
+
+  // .footer__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .footer__socials-img
+
+  &__socials-img {
+
+    @media (max-width: $breakpoint480) {
+      max-width: 100%;
+    }
+  }
+
+  // .footer__king
+
+  &__king {
+
+    @media (max-width: $breakpoint480) {
+      max-width: 100%;
+    }
+  }
+
+  // .footer__king-img
+
+  &__king-img {}
+}

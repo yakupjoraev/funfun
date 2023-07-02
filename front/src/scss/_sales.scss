@@ -1,0 +1,159 @@
+.sales {
+  overflow: hidden;
+
+  // .sales__container
+
+  &__container {
+    max-width: 1730px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  // .sales__inner
+
+  &__inner {
+    position: relative;
+    padding: 320px 0 200px;
+
+    @media (max-width: $breakpoint992) {
+      padding: 200px 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 100px 0 200px;
+    }
+  }
+
+  // .sales__title
+
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 100%;
+    color: var(--main-color);
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 40px;
+      font-size: 50px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 32px;
+    }
+  }
+
+  // .sales__descr
+
+  &__descr {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: center;
+    font-size: 20px;
+    color: var(--main-color);
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 18px;
+    }
+  }
+
+  // .sales__link
+
+  &__link {
+    margin: 0 auto;
+  }
+
+  // .sales__decor1
+
+  &__decor1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotatePic 1s linear;
+    z-index: -1;
+
+    @media (max-width: $breakpoint992) {
+      max-width: 170px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      left: -5%;
+    }
+
+    @media (max-width: $breakpoint480) {
+      max-width: 100px;
+    }
+  }
+
+  // .sales__decor2
+
+  &__decor2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: rotatePic 1s linear;
+    z-index: -1;
+
+    @media (max-width: $breakpoint992) {
+      max-width: 170px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      right: -5%;
+    }
+
+    @media (max-width: $breakpoint480) {
+      max-width: 100px;
+    }
+  }
+
+  // .sales__decor4
+
+  &__decor4 {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    animation: rotatePic 1s linear;
+    z-index: -1;
+
+    @media (max-width: $breakpoint992) {
+      max-width: 170px;
+      bottom: 5%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      left: -5%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 100px;
+    }
+  }
+
+  // .sales__king
+
+  &__king {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    z-index: -1;
+
+    @media (max-width: $breakpoint992) {
+      bottom: 0;
+      max-width: 270px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      max-width: 150px;
+      bottom: 5%;
+    }
+  }
+}

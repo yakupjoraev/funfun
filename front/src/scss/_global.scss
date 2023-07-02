@@ -1,0 +1,105 @@
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint1450) {
+    max-width: 1200px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+// Body Locked
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
+
+.main__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.main-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  border-radius: 50px;
+  background: #EDE419;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--main-color);
+
+  transition: color 0.2s linear, background-color 0.2s linear;
+
+  &:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+  }
+}
+
+.second-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #871A93;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #871A93;
+
+  transition: color 0.2s linear, background-color 0.2s linear;
+
+  &:hover {
+    background-color: #871A93;
+    color: var(--white-color);
+  }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
