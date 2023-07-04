@@ -202,8 +202,79 @@ main {
   }
 }
 
-.header__img {
-  max-width: 100%;
+.header__container {
+  max-width: 1820px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+}
+
+.header__logo-img {
+  max-width: 200px;
+}
+
+.header__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.header__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.header__connect-link {
+  min-width: 180px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.header__connect-link:hover svg path {
+  fill: var(--white-color);
+}
+
+.header__burger {
+  cursor: pointer;
 }
 
 .hero {
@@ -1137,6 +1208,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 30px;
 }
 
 @media (max-width: 1800px) {
@@ -1166,6 +1238,10 @@ main {
 @media (max-width: 1449.98px) {
   .container {
     max-width: 1200px;
+  }
+
+  .hero {
+    padding-top: 100px;
   }
 
   .hero__inner {
@@ -1242,6 +1318,22 @@ main {
 @media (max-width: 991.98px) {
   .container {
     max-width: 970px;
+  }
+
+  .header__logo-img {
+    max-width: 150px;
+  }
+
+  .header__socials {
+    display: none;
+  }
+
+  .header__connect-link {
+    min-width: 120px;
+  }
+
+  .header__burger-img {
+    max-width: 70px;
   }
 
   .hero {
@@ -1591,6 +1683,24 @@ main {
 
   .footer__king {
     max-width: 100%;
+  }
+
+  .footer__social-img {
+    max-width: 70px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header__logo-img {
+    max-width: 120px;
+  }
+
+  .header__connect-link {
+    min-width: 100px;
+  }
+
+  .header__burger-img {
+    max-width: 50px;
   }
 }
 

@@ -132,6 +132,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
   }
 
   // .footer__socials-img
@@ -155,4 +156,10 @@
   // .footer__king-img
 
   &__king-img {}
+}
+
+.footer__social-img {
+  @media (max-width: $breakpoint480) {
+    max-width: 70px;
+  }
 }
