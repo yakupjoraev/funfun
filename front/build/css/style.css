@@ -457,15 +457,13 @@ main {
   transition: height 0.2s linear;
 }
 
-.custom-select.show {
-  height: 90px;
-}
-
 .custom-select.show .select-options {
   display: block;
 }
 
 .select-selected {
+  position: relative;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,21 +478,28 @@ main {
   line-height: 140%;
   font-size: 20px;
   color: var(--main-color);
-  z-index: 1;
+  cursor: pointer;
 }
 
 .select-options {
   display: none;
+  position: absolute;
+  top: 33px;
+  left: 0;
   width: 100%;
+  padding-top: 14px;
   background-color: var(--white-color);
-  border-radius: 50px;
+  border-radius: 0 0 50px 50px;
   min-width: 160px;
+  z-index: 2;
   -webkit-animation: fade 0.3s linear;
           animation: fade 0.3s linear;
 }
 
 .select-option {
-  padding-top: 10px;
+  padding: 12px 40px;
+  border-radius: 50px;
+  height: 60px;
   font-weight: 400;
   line-height: 140%;
   font-size: 20px;
@@ -502,8 +507,8 @@ main {
   cursor: pointer;
 }
 
-.show {
-  display: block;
+.select-option:hover {
+  color: #E0CA00;
 }
 
 .select-arrow {
@@ -594,6 +599,7 @@ main {
   height: 60px;
   padding: 12px 40px;
   background-color: var(--white-color);
+  border: 3px solid transparent;
   border-radius: 50px;
   font-weight: 400;
   line-height: 140%;
@@ -640,6 +646,14 @@ main {
   line-height: 140%;
   font-size: 20px;
   color: grey;
+}
+
+.participate__input:focus {
+  border-color: #E0CA00;
+}
+
+.participate__input:active {
+  border-color: #E0CA00;
 }
 
 .participate__recapcha {
@@ -1669,6 +1683,19 @@ main {
     margin: 0 auto;
   }
 
+  .rounds__buy-item--header {
+    grid-template-columns: 80px 50px 1fr;
+  }
+
+  .rounds__buy-item {
+    grid-template-columns: 80px 50px 100px 60px;
+  }
+
+  .rounds__buy--tokens {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
+
   .sales__decor1 {
     max-width: 100px;
   }
@@ -1705,7 +1732,7 @@ main {
 }
 
 @media (max-width: 350px) {
-  .rounds__buy--tokens {
-    margin-left: -15px;
+  .rounds__buy-item {
+    grid-template-columns: 80px 50px 70px 60px;
   }
 }

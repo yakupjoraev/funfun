@@ -335,10 +335,6 @@
     margin: 0 auto;
   }
 
-  @media (max-width: 350px) {
-    margin-left: -15px;
-  }
-
   .rounds__buy-title {
     margin-bottom: 0;
     text-align: left;
@@ -402,6 +398,10 @@
     column-gap: 10px;
   }
 
+  @media (max-width: $breakpoint480) {
+    grid-template-columns: 80px 50px 1fr;
+  }
+
 }
 
 .rounds__buy-label {
@@ -428,6 +428,16 @@
     grid-template-columns: 80px 50px 50px 60px;
     column-gap: 10px;
   }
+
+  @media (max-width: $breakpoint480) {
+    grid-template-columns: 80px 50px 100px 60px;
+  }
+
+
+  @media (max-width: 350px) {
+    grid-template-columns: 80px 50px 70px 60px;
+  }
+
 }
 
 .rounds__buy-raund {
@@ -474,5 +484,12 @@
 .rounds__buy-btn {
   @media (max-width: $breakpoint768) {
     width: 60px;
+  }
+}
+
+.rounds__buy--tokens {
+  @media (max-width: $breakpoint480) {
+    width: calc(100% + 40px);
+    margin-left: -20px;
   }
 }

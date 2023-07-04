@@ -9,7 +9,7 @@ function simpleSelect() {
   }
 
   // Отображение/скрытие опций при клике на селект
-  document.querySelector('.select-arrow').addEventListener('click', function () {
+  document.querySelector('.select-selected').addEventListener('click', function () {
     container.classList.toggle('show');
   });
 
