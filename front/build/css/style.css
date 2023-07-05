@@ -248,6 +248,17 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.header__social-link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .header__menu {
@@ -275,6 +286,29 @@ main {
 
 .header__burger {
   cursor: pointer;
+}
+
+.footer__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.footer__social-link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .hero {
@@ -487,7 +521,7 @@ main {
   top: 33px;
   left: 0;
   width: 100%;
-  padding-top: 14px;
+  padding-top: 20px;
   background-color: var(--white-color);
   border-radius: 0 0 50px 50px;
   min-width: 160px;
@@ -1575,7 +1609,7 @@ main {
   }
 
   .rounds__buy-item--header {
-    grid-template-columns: 80px 50px 1fr;
+    grid-template-columns: 100px 100px 1fr;
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
@@ -1586,7 +1620,7 @@ main {
   }
 
   .rounds__buy-item {
-    grid-template-columns: 80px 50px 50px 60px;
+    grid-template-columns: 100px 100px 120px 1fr;
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
@@ -1609,7 +1643,12 @@ main {
   }
 
   .rounds__buy-btn {
-    width: 60px;
+    width: 100%;
+  }
+
+  .rounds__buy--tokens {
+    width: calc(100% + 40px);
+    margin-left: -20px;
   }
 
   .sales__inner {
@@ -1688,12 +1727,10 @@ main {
   }
 
   .rounds__buy-item {
-    grid-template-columns: 80px 50px 100px 60px;
-  }
-
-  .rounds__buy--tokens {
-    width: calc(100% + 40px);
-    margin-left: -20px;
+    grid-template-columns: 80px 50px 96px 1fr;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
   }
 
   .sales__decor1 {
@@ -1729,10 +1766,18 @@ main {
   .header__burger-img {
     max-width: 50px;
   }
+
+  .rounds__buy--tokens {
+    margin-left: -10px;
+  }
 }
 
 @media (max-width: 350px) {
   .rounds__buy-item {
     grid-template-columns: 80px 50px 70px 60px;
+  }
+
+  .rounds__buy--tokens {
+    margin-left: -22px;
   }
 }
