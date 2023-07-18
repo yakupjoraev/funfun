@@ -221,6 +221,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    max-width: 521px;
     height: 30px;
     overflow: hidden;
     border-radius: 50px;
@@ -314,7 +315,7 @@
   &__fund {
     position: absolute;
     right: 30px;
-    bottom: 22px;
+    top: 54px;
     color: #A4A4A4;
   }
 

@@ -940,6 +940,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 521px;
   height: 30px;
   overflow: hidden;
   border-radius: 50px;
@@ -986,7 +987,7 @@ main {
 .participate__fund {
   position: absolute;
   right: 30px;
-  bottom: 22px;
+  top: 54px;
   color: #A4A4A4;
 }
 
@@ -1229,6 +1230,18 @@ main {
   background-size: cover;
 }
 
+.referal__item:nth-child(1) {
+  background-image: url("../img/referal/referal-bg-1.png");
+}
+
+.referal__item:nth-child(2) {
+  background-image: url("../img/referal/referal-bg-2.png");
+}
+
+.referal__item:nth-child(3) {
+  background-image: url("../img/referal/referal-bg-3.png");
+}
+
 .referal__item-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1372,6 +1385,19 @@ main {
 }
 
 .referal__link-text {
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 1;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  max-width: 524px;
   color: #00204C;
   font-size: 20px;
   font-weight: 400;
@@ -1616,6 +1642,11 @@ span.tlt.show {
   .referal__list {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .referal__item {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -1746,6 +1777,7 @@ span.tlt.show {
   }
 
   .referal__link-text {
+    max-width: 460px;
     font-size: 18px;
   }
 
@@ -1957,6 +1989,10 @@ span.tlt.show {
     font-size: 32px;
   }
 
+  .referal__item {
+    max-width: 100%;
+  }
+
   .referal__item-header {
     height: auto;
   }
@@ -1978,6 +2014,7 @@ span.tlt.show {
   }
 
   .referal__link-text {
+    max-width: 400px;
     font-size: 14px;
   }
 
@@ -2064,6 +2101,7 @@ span.tlt.show {
   }
 
   .referal__link-text {
+    max-width: 280px;
     font-size: 10px;
   }
 
@@ -2105,5 +2143,9 @@ span.tlt.show {
 
   .rounds__buy--tokens {
     margin-left: -22px;
+  }
+
+  .referal__link-text {
+    max-width: 220px;
   }
 }
